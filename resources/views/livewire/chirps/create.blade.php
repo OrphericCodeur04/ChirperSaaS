@@ -5,7 +5,7 @@ use Livewire\Attributes\Rule;
 
 new class extends Component {
 
-    #[Rule('required|string|max:255')]
+    #[Rule('required|string|max:255' )] // , message: 'Veuillez écrire votre chirp - tweet ici'
     public string $message = '';
 
     public function store(): void {
