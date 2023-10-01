@@ -24,7 +24,7 @@ new class extends Component {
         $this->dispatch('chirp-updated');
     }
 
-    public function cancel: void {
+    public function cancel(): void {
         $this->dispatch('chirp-edit-canceled');
     }
 }; ?>
