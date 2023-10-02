@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use App\Events\ChirpCreated;
-use App\Listeners\SendChirpCreatedNotifications;
+use App\Listeners\SendChirpCreatedNotification;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -20,7 +20,7 @@ class EventServiceProvider extends ServiceProvider
         // Enregistrement de l'Ecouteur d'Event
         // LIER l'Ecouteur d'Event à l'Event correspondant
         ChirpCreated::class => [
-            SendChirpCreatedNotifications::class,
+            SendChirpCreatedNotification::class,
         ],
 
         Registered::class => [
